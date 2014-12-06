@@ -1,6 +1,7 @@
 // (c) 2006 Karol Maciaszek <karol.maciaszek@gmail.com>
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "struct.h"
 #include "maths.h"

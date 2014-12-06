@@ -1,5 +1,20 @@
 # Danse Macabre
 
+## Compile
+
+	# make
+
+## Run
+
+Linux, OS X	
+
+	# ./DanseMacabre
+
+Windows
+
+	# DanseMacabre.exe
+
+
 ## Control keys
 
 - a, z - camera horizontal angle

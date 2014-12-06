@@ -2,10 +2,18 @@
 
 #define SPEED 0.3
 
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
+#ifdef __APPLE__
+#  include <OpenGL/gl.h>
+#  include <OpenGL/glu.h>
+#  include <GLUT/glut.h>
+#else
+#  include <GL/gl.h>
+#  include <GL/glu.h>
+#  include <GL/glut.h>
+#endif
+
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "main.h"
 #include "load.h"
@@ -34,7 +42,7 @@ TActionRHand    *actionRHand;
 TActionRThigh   *actionRThigh;
 TActionSkull    *actionSkull;
 
-int tex[10];
+unsigned int tex[10];
 int mode;
 int cameraAnim;
 
@@ -377,7 +385,7 @@ int main(int argc, char* argv[])
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(800,600);
   glutInitWindowPosition(0,0);
-  glutCreateWindow("Danse Macabre (c) Karol Maciaszek <kharg@LKSnet.org>");
+  glutCreateWindow("Danse Macabre (c) Karol Maciaszek <karol.maciaszek@gmail.com>");
 
   // binding functions
   glutDisplayFunc(displayFrame);

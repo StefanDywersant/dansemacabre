@@ -3,6 +3,7 @@
 #include "struct.h"
 #include "maths.h"
 #include "math.h"
+#include "stdio.h"
 
 float xcircle(float radius, int angle) {
   float radian;
@@ -26,7 +27,7 @@ float xcircle(float radius, int angle) {
     radian = 2 * M_PI * (angle - 180) / 360;
     y = -1 * radius / sqrt(1 / tan(radian) + 1);
     return -1 * sqrt(radius*radius - y*y);
-  } else if (angle > 270 && angle <= 360) {
+  } else {
     radian = 2 * M_PI * (360 - angle) / 360;
     y = -1 * radius / sqrt(1 / tan(radian) + 1);
     return sqrt(radius*radius - y*y);
@@ -51,7 +52,7 @@ float ycircle(float radius, int angle) {
   } else if (angle > 180 && angle <= 270) {
     radian = 2 * M_PI * (angle - 180) / 360;
     return -1 * radius / sqrt(1 / tan(radian) + 1);
-  } else if (angle > 270 && angle <= 360) {
+  } else {
     radian = 2 * M_PI * (360 - angle) / 360;
     return -1 * radius / sqrt(1 / tan(radian) + 1);
   }
