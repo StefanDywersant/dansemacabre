@@ -1,4 +1,5 @@
 # Danse Macabre
+Dancing skeleton in OpenGL (College project).
 
 ## Compile
 
